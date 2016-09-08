@@ -130,7 +130,7 @@ styles:
     hillshade:
         base: polygons
         mix: stereo
-        # raster: normal
+        raster: normal
         shaders:
             uniforms:
                 u_scale: .5
