@@ -14,7 +14,12 @@ scene:
 textures:
     spheremap:
         element: "#kcanvas"
-
+cameras:
+    perspective:
+        type: perspective
+        vanishing_point: [0, 0]
+        fov: 45. # perspective correction
+        
 global:
     lines: true
     water: true
@@ -116,7 +121,11 @@ styles:
    
     stereolines:
         base: lines
-        mix: stereo                                     
+        mix: stereo     
+        
+    stereopoints:
+        base: points
+        mix: stereo
 
     hillshade:
         base: polygons
@@ -236,7 +245,7 @@ layers:
     boundaries:
         data: { source: osm }
         draw:
-            dots:
+            stereodots:
                 visible: global.lines
                 color: [.75, .75, .75]
                 width: 1px
