@@ -171,7 +171,7 @@ layers:
             stereo:
                 visible: global.water
                 order: 4
-                color: white
+                # color: white
             hillshade:
                 order: 3
             stereolines:
