@@ -114,10 +114,10 @@ styles:
                     // p_globe.z = -1000.;
                     position = p_globe;
                     position.xyz *= 8.;
-                color: |
-                    float R_GLOBE = EARTH_RADIUS / pow(2., u_map_position.z);
-                    // hide backside geo
-                    if (v_position.z <= -R_GLOBE * 8.) color.rgb = vec3(0.);
+                # color: |
+                #     float R_GLOBE = EARTH_RADIUS / pow(2., u_map_position.z);
+                #     // hide backside geo
+                #     if (v_position.z <= -R_GLOBE * 8.) color.rgb = vec3(0.);
    
     stereolines:
         base: lines
@@ -171,7 +171,7 @@ layers:
             stereo:
                 visible: global.water
                 order: 4
-                color: white
+                # color: white
             hillshade:
                 order: 3
             stereolines:
