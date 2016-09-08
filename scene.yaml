@@ -113,7 +113,10 @@ styles:
                     float R_GLOBE = EARTH_RADIUS / pow(2., u_map_position.z);
                     // hide backside geo
                     if (v_position.z <= -R_GLOBE * 8.) color.rgb = vec3(0.);
-                                        
+   
+    stereolines:
+        base: lines
+        mix: stereo                                     
 
     hillshade:
         base: polygons
@@ -148,7 +151,7 @@ layers:
         draw:
             hillshade:
                 order: 0
-            lines:
+            stereolines:
                 visible: global.lines
                 order: 2
                 color: [.3, .3, .3]
@@ -156,13 +159,13 @@ layers:
     water:
         data: { source: osm }
         draw:
-            polygons:
+            stereo:
                 visible: global.water
                 order: 4
                 color: white
             hillshade:
                 order: 3
-            lines:
+            stereolines:
                 visible: global.lines
                 order: 3
                 color: [.3, .3, .3]
