@@ -10,7 +10,7 @@ sources:
         max_zoom: 15
 scene:
     background:
-        color: black
+        color: white
 textures:
     spheremap:
         element: "#kcanvas"
@@ -212,7 +212,7 @@ layers:
                         - { population: { min: 100000 } , $zoom: {min: 8 } }
                         - { population: { min: 50000 } , $zoom: {min: 12 } }
                 draw:
-                    points:
+                    stereopoints:
                         visible: global.labels
                         priority: 2
                         color: '#aaa'
