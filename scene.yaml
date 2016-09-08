@@ -10,7 +10,7 @@ sources:
         max_zoom: 15
 scene:
     background:
-        color: white
+        color: black
 textures:
     spheremap:
         element: "#kcanvas"
@@ -245,7 +245,7 @@ layers:
     boundaries:
         data: { source: osm }
         draw:
-            stereodots:
+            stereolines:
                 visible: global.lines
                 color: [.75, .75, .75]
                 width: 1px
